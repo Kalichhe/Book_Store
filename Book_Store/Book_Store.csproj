@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9037F451-B1DD-412D-BFA3-0749F5EC74A9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Book_Store</RootNamespace>
+    <AssemblyName>Book_Store</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Connection.cs" />
+    <Compile Include="CRUD\Add_Book\Book.cs" />
+    <Compile Include="CRUD\Book_DB.cs" />
+    <Compile Include="DataSetBook.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetBook.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Book_Folder\Add_Book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Book_Folder\Add_Book.Designer.cs">
+      <DependentUpon>Add_Book.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Book_Folder\Add_Book_To_Cart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Book_Folder\Add_Book_To_Cart.Designer.cs">
+      <DependentUpon>Add_Book_To_Cart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Book_Folder\Book_.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Book_Folder\Book_.Designer.cs">
+      <DependentUpon>Book_.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Book_Folder\Check_Amount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Book_Folder\Check_Amount.Designer.cs">
+      <DependentUpon>Check_Amount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Book_Folder\Decrease_Book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Book_Folder\Decrease_Book.Designer.cs">
+      <DependentUpon>Decrease_Book.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Book_Folder\Delete_Book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Book_Folder\Delete_Book.Designer.cs">
+      <DependentUpon>Delete_Book.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Book_Folder\Increase_Book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Book_Folder\Increase_Book.Designer.cs">
+      <DependentUpon>Increase_Book.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Book_Folder\Modify_Book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Book_Folder\Modify_Book.Designer.cs">
+      <DependentUpon>Modify_Book.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Book_Folder\Units_Nearing_Depletion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Book_Folder\Units_Nearing_Depletion.Designer.cs">
+      <DependentUpon>Units_Nearing_Depletion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Book_Folder\Validate_Book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Book_Folder\Validate_Book.Designer.cs">
+      <DependentUpon>Validate_Book.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Guarantor_Folder\Add_Guarantor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Guarantor_Folder\Add_Guarantor.Designer.cs">
+      <DependentUpon>Add_Guarantor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Guarantor_Folder\Guarantor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Guarantor_Folder\Guarantor.Designer.cs">
+      <DependentUpon>Guarantor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Guarantor_Folder\Pay_Off_Debt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Guarantor_Folder\Pay_Off_Debt.Designer.cs">
+      <DependentUpon>Pay_Off_Debt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Guarantor_Folder\Show_Guarantor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Guarantor_Folder\Show_Guarantor.Designer.cs">
+      <DependentUpon>Show_Guarantor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Shopping_Cart_Folder\Shopping_Cart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Shopping_Cart_Folder\Shopping_Cart.Designer.cs">
+      <DependentUpon>Shopping_Cart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Add_Book_To_Cart_Folder\Add_Book_To_Cart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Add_Book_To_Cart_Folder\Add_Book_To_Cart.Designer.cs">
+      <DependentUpon>Add_Book_To_Cart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Show_Book_Folder\Show_Book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Show_Book_Folder\Show_Book.Designer.cs">
+      <DependentUpon>Show_Book.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Interface\Book_Folder\Add_Book.resx">
+      <DependentUpon>Add_Book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Book_Folder\Add_Book_To_Cart.resx">
+      <DependentUpon>Add_Book_To_Cart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Book_Folder\Book_.resx">
+      <DependentUpon>Book_.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Book_Folder\Check_Amount.resx">
+      <DependentUpon>Check_Amount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Book_Folder\Decrease_Book.resx">
+      <DependentUpon>Decrease_Book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Book_Folder\Delete_Book.resx">
+      <DependentUpon>Delete_Book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Book_Folder\Increase_Book.resx">
+      <DependentUpon>Increase_Book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Book_Folder\Modify_Book.resx">
+      <DependentUpon>Modify_Book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Book_Folder\Units_Nearing_Depletion.resx">
+      <DependentUpon>Units_Nearing_Depletion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Book_Folder\Validate_Book.resx">
+      <DependentUpon>Validate_Book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Guarantor_Folder\Add_Guarantor.resx">
+      <DependentUpon>Add_Guarantor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Guarantor_Folder\Guarantor.resx">
+      <DependentUpon>Guarantor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Guarantor_Folder\Pay_Off_Debt.resx">
+      <DependentUpon>Pay_Off_Debt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Guarantor_Folder\Show_Guarantor.resx">
+      <DependentUpon>Show_Guarantor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Shopping_Cart_Folder\Shopping_Cart.resx">
+      <DependentUpon>Shopping_Cart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Add_Book_To_Cart_Folder\Add_Book_To_Cart.resx">
+      <DependentUpon>Add_Book_To_Cart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Show_Book_Folder\Show_Book.resx">
+      <DependentUpon>Show_Book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="DataSetBook.xsc">
+      <DependentUpon>DataSetBook.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetBook.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetBook.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetBook.xss">
+      <DependentUpon>DataSetBook.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
