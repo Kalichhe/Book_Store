@@ -50,5 +50,10 @@ namespace Book_Store.Interface.Show_Book_Folder
             this.bookTableAdapter.Fill(this.dataSetBook.Book);
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -31,8 +31,6 @@
             this.Book_label1 = new System.Windows.Forms.Label();
             this.UnitsNearingDepletion_button3 = new System.Windows.Forms.Button();
             this.CheckAmount_button3 = new System.Windows.Forms.Button();
-            this.IncreaseBook_button3 = new System.Windows.Forms.Button();
-            this.DecreaseBook_button3 = new System.Windows.Forms.Button();
             this.SellBook_button3 = new System.Windows.Forms.Button();
             this.ValidateBook_button3 = new System.Windows.Forms.Button();
             this.DeleteBook_button3 = new System.Windows.Forms.Button();
@@ -55,7 +53,7 @@
             // UnitsNearingDepletion_button3
             // 
             this.UnitsNearingDepletion_button3.Font = new System.Drawing.Font("Bell MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UnitsNearingDepletion_button3.Location = new System.Drawing.Point(278, 209);
+            this.UnitsNearingDepletion_button3.Location = new System.Drawing.Point(281, 209);
             this.UnitsNearingDepletion_button3.Name = "UnitsNearingDepletion_button3";
             this.UnitsNearingDepletion_button3.Size = new System.Drawing.Size(258, 34);
             this.UnitsNearingDepletion_button3.TabIndex = 10;
@@ -66,35 +64,13 @@
             // CheckAmount_button3
             // 
             this.CheckAmount_button3.Font = new System.Drawing.Font("Bell MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CheckAmount_button3.Location = new System.Drawing.Point(323, 169);
+            this.CheckAmount_button3.Location = new System.Drawing.Point(322, 89);
             this.CheckAmount_button3.Name = "CheckAmount_button3";
             this.CheckAmount_button3.Size = new System.Drawing.Size(161, 34);
             this.CheckAmount_button3.TabIndex = 9;
             this.CheckAmount_button3.Text = "Check Amount";
             this.CheckAmount_button3.UseVisualStyleBackColor = true;
             this.CheckAmount_button3.Click += new System.EventHandler(this.CheckAmount_button3_Click);
-            // 
-            // IncreaseBook_button3
-            // 
-            this.IncreaseBook_button3.Font = new System.Drawing.Font("Bell MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.IncreaseBook_button3.Location = new System.Drawing.Point(323, 89);
-            this.IncreaseBook_button3.Name = "IncreaseBook_button3";
-            this.IncreaseBook_button3.Size = new System.Drawing.Size(164, 34);
-            this.IncreaseBook_button3.TabIndex = 7;
-            this.IncreaseBook_button3.Text = "Increase Book";
-            this.IncreaseBook_button3.UseVisualStyleBackColor = true;
-            this.IncreaseBook_button3.Click += new System.EventHandler(this.IncreaseBook_button3_Click);
-            // 
-            // DecreaseBook_button3
-            // 
-            this.DecreaseBook_button3.Font = new System.Drawing.Font("Bell MT", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DecreaseBook_button3.Location = new System.Drawing.Point(323, 129);
-            this.DecreaseBook_button3.Name = "DecreaseBook_button3";
-            this.DecreaseBook_button3.Size = new System.Drawing.Size(164, 34);
-            this.DecreaseBook_button3.TabIndex = 8;
-            this.DecreaseBook_button3.Text = "Decrease Book";
-            this.DecreaseBook_button3.UseVisualStyleBackColor = true;
-            this.DecreaseBook_button3.Click += new System.EventHandler(this.DecreaseBook_button3_Click_1);
             // 
             // SellBook_button3
             // 
@@ -171,6 +147,7 @@
             this.AddBookToCart_button1.TabIndex = 12;
             this.AddBookToCart_button1.Text = "Add Book To Cart";
             this.AddBookToCart_button1.UseVisualStyleBackColor = true;
+            this.AddBookToCart_button1.Click += new System.EventHandler(this.AddBookToCart_button1_Click);
             // 
             // Book_
             // 
@@ -182,8 +159,6 @@
             this.Controls.Add(this.UnitsNearingDepletion_button3);
             this.Controls.Add(this.CheckAmount_button3);
             this.Controls.Add(this.Book_label1);
-            this.Controls.Add(this.IncreaseBook_button3);
-            this.Controls.Add(this.DecreaseBook_button3);
             this.Controls.Add(this.SellBook_button3);
             this.Controls.Add(this.ValidateBook_button3);
             this.Controls.Add(this.AddBook_button3);
@@ -201,8 +176,6 @@
         private System.Windows.Forms.Label Book_label1;
         private System.Windows.Forms.Button UnitsNearingDepletion_button3;
         private System.Windows.Forms.Button CheckAmount_button3;
-        private System.Windows.Forms.Button IncreaseBook_button3;
-        private System.Windows.Forms.Button DecreaseBook_button3;
         private System.Windows.Forms.Button SellBook_button3;
         private System.Windows.Forms.Button ValidateBook_button3;
         private System.Windows.Forms.Button DeleteBook_button3;

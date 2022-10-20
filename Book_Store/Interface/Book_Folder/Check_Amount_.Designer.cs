@@ -1,6 +1,6 @@
 ﻿namespace Book_Store.Interface.Book_Folder
 {
-    partial class Check_Amount
+    partial class Check_Amount_
     {
         /// <summary>
         /// Required designer variable.

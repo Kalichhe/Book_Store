@@ -122,8 +122,5 @@
         private System.Windows.Forms.Button ToClose_button3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource cartBindingSource;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookcodeDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn numberunitsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookidDataGridViewTextBoxColumn;
     }
 }

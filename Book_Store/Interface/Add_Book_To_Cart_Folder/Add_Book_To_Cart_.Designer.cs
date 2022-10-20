@@ -1,6 +1,6 @@
 ﻿namespace Book_Store.Interface.Book_Folder
 {
-    partial class Add_Book_To_Cart
+    partial class Add_Book_To_Cart_
     {
         /// <summary>
         /// Required designer variable.
@@ -73,6 +73,7 @@
             this.ToClose_button3.TabIndex = 17;
             this.ToClose_button3.Text = "To Close";
             this.ToClose_button3.UseVisualStyleBackColor = true;
+            this.ToClose_button3.Click += new System.EventHandler(this.ToClose_button3_Click);
             // 
             // NumberUnits_label1
             // 
@@ -100,8 +101,9 @@
             this.Send_button1.TabIndex = 20;
             this.Send_button1.Text = "Send";
             this.Send_button1.UseVisualStyleBackColor = true;
+            this.Send_button1.Click += new System.EventHandler(this.Send_button1_Click);
             // 
-            // Add_Book_To_Cart
+            // Add_Book_To_Cart_
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -113,7 +115,7 @@
             this.Controls.Add(this.BookCode_label1);
             this.Controls.Add(this.BookCode_textBox1);
             this.Controls.Add(this.AddBookToCart_label1);
-            this.Name = "Add_Book_To_Cart";
+            this.Name = "Add_Book_To_Cart_";
             this.Text = "Add_Book_To_Cart";
             this.ResumeLayout(false);
             this.PerformLayout();

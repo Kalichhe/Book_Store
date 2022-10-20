@@ -46,25 +46,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Add_Book_To_Cart\Book_To_Cart\Book_To_Cart.cs" />
+    <Compile Include="Add_Book_To_Cart\Book_To_Cart_DB.cs" />
+    <Compile Include="Check_Amount\Check_Amount_DB.cs" />
     <Compile Include="Connection.cs" />
-    <Compile Include="CRUD\Add_Book\Book.cs" />
+    <Compile Include="CRUD\Book\Book.cs" />
     <Compile Include="CRUD\Book_DB.cs" />
+    <Compile Include="DataSetBook.cs">
+      <DependentUpon>DataSetBook.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSetBook.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetBook.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSetGuarantor.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetGuarantor.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Guarantor\Guarantor_1\Guarantor_.cs" />
+    <Compile Include="Guarantor\Guarantor_DB.cs" />
     <Compile Include="Interface\Book_Folder\Add_Book.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Interface\Book_Folder\Add_Book.Designer.cs">
       <DependentUpon>Add_Book.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interface\Book_Folder\Add_Book_To_Cart.cs">
+    <Compile Include="Interface\Add_Book_To_Cart_Folder\Add_Book_To_Cart_.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Interface\Book_Folder\Add_Book_To_Cart.Designer.cs">
-      <DependentUpon>Add_Book_To_Cart.cs</DependentUpon>
+    <Compile Include="Interface\Add_Book_To_Cart_Folder\Add_Book_To_Cart_.Designer.cs">
+      <DependentUpon>Add_Book_To_Cart_.cs</DependentUpon>
     </Compile>
     <Compile Include="Interface\Book_Folder\Book_.cs">
       <SubType>Form</SubType>
@@ -72,17 +85,11 @@
     <Compile Include="Interface\Book_Folder\Book_.Designer.cs">
       <DependentUpon>Book_.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interface\Book_Folder\Check_Amount.cs">
+    <Compile Include="Interface\Book_Folder\Check_Amount_.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Interface\Book_Folder\Check_Amount.Designer.cs">
-      <DependentUpon>Check_Amount.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Interface\Book_Folder\Decrease_Book.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interface\Book_Folder\Decrease_Book.Designer.cs">
-      <DependentUpon>Decrease_Book.cs</DependentUpon>
+    <Compile Include="Interface\Book_Folder\Check_Amount_.Designer.cs">
+      <DependentUpon>Check_Amount_.cs</DependentUpon>
     </Compile>
     <Compile Include="Interface\Book_Folder\Delete_Book.cs">
       <SubType>Form</SubType>
@@ -90,23 +97,17 @@
     <Compile Include="Interface\Book_Folder\Delete_Book.Designer.cs">
       <DependentUpon>Delete_Book.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interface\Book_Folder\Increase_Book.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interface\Book_Folder\Increase_Book.Designer.cs">
-      <DependentUpon>Increase_Book.cs</DependentUpon>
-    </Compile>
     <Compile Include="Interface\Book_Folder\Modify_Book.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Interface\Book_Folder\Modify_Book.Designer.cs">
       <DependentUpon>Modify_Book.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interface\Book_Folder\Units_Nearing_Depletion.cs">
+    <Compile Include="Interface\Book_Folder\Units_Nearing_Depletion_.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Interface\Book_Folder\Units_Nearing_Depletion.Designer.cs">
-      <DependentUpon>Units_Nearing_Depletion.cs</DependentUpon>
+    <Compile Include="Interface\Book_Folder\Units_Nearing_Depletion_.Designer.cs">
+      <DependentUpon>Units_Nearing_Depletion_.cs</DependentUpon>
     </Compile>
     <Compile Include="Interface\Book_Folder\Validate_Book.cs">
       <SubType>Form</SubType>
@@ -150,12 +151,6 @@
     <Compile Include="Interface\Shopping_Cart_Folder\Shopping_Cart.Designer.cs">
       <DependentUpon>Shopping_Cart.cs</DependentUpon>
     </Compile>
-    <Compile Include="Interface\Add_Book_To_Cart_Folder\Add_Book_To_Cart.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Interface\Add_Book_To_Cart_Folder\Add_Book_To_Cart.Designer.cs">
-      <DependentUpon>Add_Book_To_Cart.cs</DependentUpon>
-    </Compile>
     <Compile Include="Interface\Show_Book_Folder\Show_Book.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,29 +162,23 @@
     <EmbeddedResource Include="Interface\Book_Folder\Add_Book.resx">
       <DependentUpon>Add_Book.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Interface\Book_Folder\Add_Book_To_Cart.resx">
-      <DependentUpon>Add_Book_To_Cart.cs</DependentUpon>
+    <EmbeddedResource Include="Interface\Add_Book_To_Cart_Folder\Add_Book_To_Cart_.resx">
+      <DependentUpon>Add_Book_To_Cart_.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\Book_Folder\Book_.resx">
       <DependentUpon>Book_.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Interface\Book_Folder\Check_Amount.resx">
-      <DependentUpon>Check_Amount.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interface\Book_Folder\Decrease_Book.resx">
-      <DependentUpon>Decrease_Book.cs</DependentUpon>
+    <EmbeddedResource Include="Interface\Book_Folder\Check_Amount_.resx">
+      <DependentUpon>Check_Amount_.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\Book_Folder\Delete_Book.resx">
       <DependentUpon>Delete_Book.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Interface\Book_Folder\Increase_Book.resx">
-      <DependentUpon>Increase_Book.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Interface\Book_Folder\Modify_Book.resx">
       <DependentUpon>Modify_Book.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Interface\Book_Folder\Units_Nearing_Depletion.resx">
-      <DependentUpon>Units_Nearing_Depletion.cs</DependentUpon>
+    <EmbeddedResource Include="Interface\Book_Folder\Units_Nearing_Depletion_.resx">
+      <DependentUpon>Units_Nearing_Depletion_.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\Book_Folder\Validate_Book.resx">
       <DependentUpon>Validate_Book.cs</DependentUpon>
@@ -211,9 +200,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\Shopping_Cart_Folder\Shopping_Cart.resx">
       <DependentUpon>Shopping_Cart.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Interface\Add_Book_To_Cart_Folder\Add_Book_To_Cart.resx">
-      <DependentUpon>Add_Book_To_Cart.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\Show_Book_Folder\Show_Book.resx">
       <DependentUpon>Show_Book.cs</DependentUpon>
@@ -238,6 +224,17 @@
     <None Include="DataSetBook.xss">
       <DependentUpon>DataSetBook.xsd</DependentUpon>
     </None>
+    <None Include="DataSetGuarantor.xsc">
+      <DependentUpon>DataSetGuarantor.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetGuarantor.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetGuarantor.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetGuarantor.xss">
+      <DependentUpon>DataSetGuarantor.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -251,6 +248,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="More Functions\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

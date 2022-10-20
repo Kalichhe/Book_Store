@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace Book_Store.Interface.Book_Folder
 {
-    public partial class Decrease_Book : Form
+    public partial class Add_Book_To_Cart_ : Form
     {
-        public Decrease_Book()
+        public Add_Book_To_Cart_()
         {
             InitializeComponent();
-            this.CenterToScreen();
+            CenterToScreen();
         }
 
         private void ToClose_button3_Click(object sender, EventArgs e)
@@ -25,7 +25,7 @@ namespace Book_Store.Interface.Book_Folder
 
         private void Send_button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+
         }
     }
 }

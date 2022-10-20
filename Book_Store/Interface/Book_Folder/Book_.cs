@@ -42,20 +42,8 @@ namespace Book_Store.Interface
 
         private void CheckAmount_button3_Click(object sender, EventArgs e)
         {
-            using (Check_Amount check_Amount = new Check_Amount())
-                check_Amount.ShowDialog();
-        }
-
-        private void IncreaseBook_button3_Click(object sender, EventArgs e)
-        {
-            using (Increase_Book increase_Book = new Increase_Book())
-                increase_Book.ShowDialog();
-        }
-
-        private void DecreaseBook_button3_Click_1(object sender, EventArgs e)
-        {
-            using (Decrease_Book decrease_Book = new Decrease_Book())
-                decrease_Book.ShowDialog();
+            using (Check_Amount_ check_Amount_ = new Check_Amount_())
+                check_Amount_.ShowDialog();
         }
 
         private void SellBook_button3_Click(object sender, EventArgs e)
@@ -91,7 +79,7 @@ namespace Book_Store.Interface
 
         private void UnitsNearingDepletion_button3_Click(object sender, EventArgs e)
         {
-            using (Units_Nearing_Depletion units_Nearing_Depletion = new Units_Nearing_Depletion())
+            using (Units_Nearing_Depletion_ units_Nearing_Depletion = new Units_Nearing_Depletion_())
                 units_Nearing_Depletion.ShowDialog();
         }
 
@@ -124,6 +112,12 @@ namespace Book_Store.Interface
             using (Guarantor guarantor = new Guarantor())
                 guarantor.ShowDialog();
             this.Close();
+        }
+
+        private void AddBookToCart_button1_Click(object sender, EventArgs e)
+        {
+            using(Add_Book_To_Cart_ add_Book_To_Cart = new Book_Folder.Add_Book_To_Cart_())
+                add_Book_To_Cart.ShowDialog();
         }
     }
 }

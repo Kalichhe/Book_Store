@@ -45,7 +45,7 @@ namespace Book_Store.Interface.Book_Folder
                 {
                     Book book = new Book();
                     book.Code = Convert.ToInt32(BookCode_textBox1.Text.Trim());
-                    book.Name = BookCategory_textBox1.Text.Trim().ToUpper();
+                    book.Name = BookName_textBox1.Text.Trim().ToUpper();
                     book.Category = BookCategory_textBox1.Text.Trim().ToUpper();
                     book.Amount = Convert.ToInt32(BookAmount_textBox1.Text.Trim());
                     book.Value = Convert.ToInt32(BookValue_textBox1.Text.Trim());
