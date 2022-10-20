@@ -16,7 +16,6 @@ C:\Users\kalic\source\repos\Book_Store\Book_Store\obj\Debug\Book_Store.Interface
 C:\Users\kalic\source\repos\Book_Store\Book_Store\obj\Debug\Book_Store.Interface.Book_Folder.Modify_Book.resources
 C:\Users\kalic\source\repos\Book_Store\Book_Store\obj\Debug\Book_Store.Interface.Book_Folder.Delete_Book.resources
 C:\Users\kalic\source\repos\Book_Store\Book_Store\obj\Debug\Book_Store.Interface.Book_Folder.Validate_Book.resources
-C:\Users\kalic\source\repos\Book_Store\Book_Store\obj\Debug\Book_Store.Interface.Show_Book_Folder.Add_Book_To_Cart.resources
 C:\Users\kalic\source\repos\Book_Store\Book_Store\obj\Debug\Book_Store.Interface.Show_Book_Folder.Show_Book.resources
 C:\Users\kalic\source\repos\Book_Store\Book_Store\obj\Debug\Book_Store.Interface.Guarantor_Folder.Add_Guarantor.resources
 C:\Users\kalic\source\repos\Book_Store\Book_Store\obj\Debug\Book_Store.Interface.Guarantor_Folder.Pay_Off_Debt.resources
@@ -24,3 +23,4 @@ C:\Users\kalic\source\repos\Book_Store\Book_Store\obj\Debug\Book_Store.Interface
 C:\Users\kalic\source\repos\Book_Store\Book_Store\obj\Debug\Book_Store.Interface.Book_Folder.Check_Amount_.resources
 C:\Users\kalic\source\repos\Book_Store\Book_Store\obj\Debug\Book_Store.Interface.Book_Folder.Units_Nearing_Depletion_.resources
 C:\Users\kalic\source\repos\Book_Store\Book_Store\obj\Debug\Book_Store.Interface.Book_Folder.Add_Book_To_Cart_.resources
+C:\Users\kalic\source\repos\Book_Store\Book_Store\obj\Debug\Book_Store.Interface.Book_Folder.Sell_Book.resources

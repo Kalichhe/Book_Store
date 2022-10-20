@@ -88,7 +88,6 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(571, 334);
             this.dataGridView1.TabIndex = 19;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // cartBindingSource
             // 
@@ -106,7 +105,6 @@
             this.Controls.Add(this.PayOffDebt_label1);
             this.Name = "Pay_Off_Debt";
             this.Text = "Pay_Off_Debt";
-            this.Load += new System.EventHandler(this.Pay_Off_Debt_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cartBindingSource)).EndInit();
             this.ResumeLayout(false);

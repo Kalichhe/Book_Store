@@ -28,10 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.ShoppingCart_label1 = new System.Windows.Forms.Label();
             this.ToClose_button3 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.bookToCartBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetTotal = new Book_Store.DataSetTotal();
+            this.shoppingCartBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSetShoppingCart = new Book_Store.DB.DataSetShoppingCart();
+            this.shoppingCartBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.shoppingCartTableAdapter = new Book_Store.DB.DataSetShoppingCartTableAdapters.ShoppingCartTableAdapter();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataSetBook_To_Cart = new Book_Store.DB.DataSetBook_To_Cart();
+            this.dataSetBookToCartBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bookToCartBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.book_To_CartTableAdapter = new Book_Store.DB.DataSetBook_To_CartTableAdapters.Book_To_CartTableAdapter();
+            this.unitsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.bookToCartBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetTotal)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shoppingCartBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetShoppingCart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shoppingCartBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetBook_To_Cart)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetBookToCartBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookToCartBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // ShoppingCart_label1
@@ -55,28 +76,104 @@
             this.ToClose_button3.UseVisualStyleBackColor = true;
             this.ToClose_button3.Click += new System.EventHandler(this.ToClose_button3_Click);
             // 
-            // dataGridView1
+            // bookToCartBindingSource
             // 
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 90);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(776, 348);
-            this.dataGridView1.TabIndex = 17;
+            this.bookToCartBindingSource.DataMember = "Book_To_Cart";
+            this.bookToCartBindingSource.DataSource = this.dataSetTotal;
+            // 
+            // dataSetTotal
+            // 
+            this.dataSetTotal.DataSetName = "DataSet1";
+            this.dataSetTotal.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // shoppingCartBindingSource
+            // 
+            this.shoppingCartBindingSource.DataMember = "Shopping_Cart";
+            // 
+            // dataSetShoppingCart
+            // 
+            this.dataSetShoppingCart.DataSetName = "DataSetShoppingCart";
+            this.dataSetShoppingCart.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // shoppingCartBindingSource1
+            // 
+            this.shoppingCartBindingSource1.DataMember = "ShoppingCart";
+            this.shoppingCartBindingSource1.DataSource = this.dataSetShoppingCart;
+            // 
+            // shoppingCartTableAdapter
+            // 
+            this.shoppingCartTableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoGenerateColumns = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.unitsDataGridViewTextBoxColumn,
+            this.codeDataGridViewTextBoxColumn});
+            this.dataGridView2.DataSource = this.bookToCartBindingSource1;
+            this.dataGridView2.Location = new System.Drawing.Point(12, 90);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(405, 348);
+            this.dataGridView2.TabIndex = 18;
+            // 
+            // dataSetBook_To_Cart
+            // 
+            this.dataSetBook_To_Cart.DataSetName = "DataSetBook_To_Cart";
+            this.dataSetBook_To_Cart.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dataSetBookToCartBindingSource
+            // 
+            this.dataSetBookToCartBindingSource.DataSource = this.dataSetBook_To_Cart;
+            this.dataSetBookToCartBindingSource.Position = 0;
+            // 
+            // bookToCartBindingSource1
+            // 
+            this.bookToCartBindingSource1.DataMember = "Book_To_Cart";
+            this.bookToCartBindingSource1.DataSource = this.dataSetBook_To_Cart;
+            // 
+            // book_To_CartTableAdapter
+            // 
+            this.book_To_CartTableAdapter.ClearBeforeFill = true;
+            // 
+            // unitsDataGridViewTextBoxColumn
+            // 
+            this.unitsDataGridViewTextBoxColumn.DataPropertyName = "Units";
+            this.unitsDataGridViewTextBoxColumn.HeaderText = "Units";
+            this.unitsDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.unitsDataGridViewTextBoxColumn.Name = "unitsDataGridViewTextBoxColumn";
+            this.unitsDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // codeDataGridViewTextBoxColumn
+            // 
+            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
+            this.codeDataGridViewTextBoxColumn.HeaderText = "Code";
+            this.codeDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
+            this.codeDataGridViewTextBoxColumn.Width = 125;
             // 
             // Shopping_Cart
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dataGridView1);
+            this.ClientSize = new System.Drawing.Size(435, 450);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.ToClose_button3);
             this.Controls.Add(this.ShoppingCart_label1);
             this.Name = "Shopping_Cart";
             this.Text = "Shopping_Cart";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.Shopping_Cart_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.bookToCartBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetTotal)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shoppingCartBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetShoppingCart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shoppingCartBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetBook_To_Cart)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetBookToCartBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bookToCartBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -86,6 +183,18 @@
 
         private System.Windows.Forms.Label ShoppingCart_label1;
         private System.Windows.Forms.Button ToClose_button3;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource shoppingCartBindingSource;
+        private System.Windows.Forms.BindingSource bookToCartBindingSource;
+        private DataSetTotal dataSetTotal;
+        private DB.DataSetShoppingCart dataSetShoppingCart;
+        private System.Windows.Forms.BindingSource shoppingCartBindingSource1;
+        private DB.DataSetShoppingCartTableAdapters.ShoppingCartTableAdapter shoppingCartTableAdapter;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.BindingSource dataSetBookToCartBindingSource;
+        private DB.DataSetBook_To_Cart dataSetBook_To_Cart;
+        private System.Windows.Forms.BindingSource bookToCartBindingSource1;
+        private DB.DataSetBook_To_CartTableAdapters.Book_To_CartTableAdapter book_To_CartTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn unitsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codeDataGridViewTextBoxColumn;
     }
 }

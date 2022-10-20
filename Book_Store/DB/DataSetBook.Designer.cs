@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Book_Store {
+namespace Book_Store.DB {
     
     
     /// <summary>
@@ -1156,7 +1156,7 @@ namespace Book_Store {
         }
     }
 }
-namespace Book_Store.DataSetBookTableAdapters {
+namespace Book_Store.DB.DataSetBookTableAdapters {
     
     
     /// <summary>

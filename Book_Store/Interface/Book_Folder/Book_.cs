@@ -20,35 +20,10 @@ namespace Book_Store.Interface
             this.CenterToScreen();
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DecreaseBook_button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void Back_button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void CheckAmount_button3_Click(object sender, EventArgs e)
         {
             using (Check_Amount_ check_Amount_ = new Check_Amount_())
                 check_Amount_.ShowDialog();
-        }
-
-        private void SellBook_button3_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void ValidateBook_button3_Click(object sender, EventArgs e)

@@ -32,32 +32,29 @@
             this.ToClose_button3 = new System.Windows.Forms.Button();
             this.UnitsNearingDepletion_label1 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.codeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.categoryDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.amountDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.valueDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.book1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSetBook2 = new Book_Store.DataSetBook();
             this.bookBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSetBook = new Book_Store.DataSetBook();
             this.bookBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSetBook1 = new Book_Store.DataSetBook();
-            this.bookTableAdapter = new Book_Store.DataSetBookTableAdapters.BookTableAdapter();
             this.dataSetBook1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSetBook1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.bookBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.book1TableAdapter = new Book_Store.DataSetBookTableAdapters.Book1TableAdapter();
+            this.dataSetBook = new Book_Store.DB.DataSetBook();
+            this.book1BindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.book1TableAdapter = new Book_Store.DB.DataSetBookTableAdapters.Book1TableAdapter();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.book1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetBook2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetBook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetBook1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetBook1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetBook1BindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetBook)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.book1BindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // ToClose_button3
@@ -86,112 +83,89 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.codeDataGridViewTextBoxColumn,
-            this.nameDataGridViewTextBoxColumn,
-            this.categoryDataGridViewTextBoxColumn,
-            this.amountDataGridViewTextBoxColumn,
-            this.valueDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.book1BindingSource;
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.dataGridView1.DataSource = this.book1BindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(12, 116);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(905, 254);
             this.dataGridView1.TabIndex = 4;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // codeDataGridViewTextBoxColumn
-            // 
-            this.codeDataGridViewTextBoxColumn.DataPropertyName = "Code";
-            this.codeDataGridViewTextBoxColumn.HeaderText = "Code";
-            this.codeDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.codeDataGridViewTextBoxColumn.Name = "codeDataGridViewTextBoxColumn";
-            this.codeDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // nameDataGridViewTextBoxColumn
-            // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
-            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // categoryDataGridViewTextBoxColumn
-            // 
-            this.categoryDataGridViewTextBoxColumn.DataPropertyName = "Category";
-            this.categoryDataGridViewTextBoxColumn.HeaderText = "Category";
-            this.categoryDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.categoryDataGridViewTextBoxColumn.Name = "categoryDataGridViewTextBoxColumn";
-            this.categoryDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // amountDataGridViewTextBoxColumn
-            // 
-            this.amountDataGridViewTextBoxColumn.DataPropertyName = "Amount";
-            this.amountDataGridViewTextBoxColumn.HeaderText = "Amount";
-            this.amountDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.amountDataGridViewTextBoxColumn.Name = "amountDataGridViewTextBoxColumn";
-            this.amountDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // valueDataGridViewTextBoxColumn
-            // 
-            this.valueDataGridViewTextBoxColumn.DataPropertyName = "Value";
-            this.valueDataGridViewTextBoxColumn.HeaderText = "Value";
-            this.valueDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.valueDataGridViewTextBoxColumn.Name = "valueDataGridViewTextBoxColumn";
-            this.valueDataGridViewTextBoxColumn.Width = 125;
             // 
             // book1BindingSource
             // 
             this.book1BindingSource.DataMember = "Book1";
-            this.book1BindingSource.DataSource = this.dataSetBook2;
-            // 
-            // dataSetBook2
-            // 
-            this.dataSetBook2.DataSetName = "DataSetBook";
-            this.dataSetBook2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bookBindingSource
             // 
             this.bookBindingSource.DataMember = "Book";
-            this.bookBindingSource.DataSource = this.dataSetBook;
-            // 
-            // dataSetBook
-            // 
-            this.dataSetBook.DataSetName = "DataSetBook";
-            this.dataSetBook.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // bookBindingSource1
             // 
             this.bookBindingSource1.DataMember = "Book";
-            this.bookBindingSource1.DataSource = this.dataSetBook1;
-            // 
-            // dataSetBook1
-            // 
-            this.dataSetBook1.DataSetName = "DataSetBook";
-            this.dataSetBook1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // bookTableAdapter
-            // 
-            this.bookTableAdapter.ClearBeforeFill = true;
-            // 
-            // dataSetBook1BindingSource
-            // 
-            this.dataSetBook1BindingSource.DataSource = this.dataSetBook1;
-            this.dataSetBook1BindingSource.Position = 0;
-            // 
-            // dataSetBook1BindingSource1
-            // 
-            this.dataSetBook1BindingSource1.DataSource = this.dataSetBook1;
-            this.dataSetBook1BindingSource1.Position = 0;
             // 
             // bookBindingSource2
             // 
             this.bookBindingSource2.DataMember = "Book";
             this.bookBindingSource2.DataSource = this.dataSetBook1BindingSource1;
             // 
+            // dataSetBook
+            // 
+            this.dataSetBook.DataSetName = "DataSetBook";
+            this.dataSetBook.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // book1BindingSource1
+            // 
+            this.book1BindingSource1.DataMember = "Book1";
+            this.book1BindingSource1.DataSource = this.dataSetBook;
+            // 
             // book1TableAdapter
             // 
             this.book1TableAdapter.ClearBeforeFill = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "Code";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Code";
+            this.dataGridViewTextBoxColumn1.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Name";
+            this.dataGridViewTextBoxColumn2.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn2.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Category";
+            this.dataGridViewTextBoxColumn3.HeaderText = "Category";
+            this.dataGridViewTextBoxColumn3.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Amount";
+            this.dataGridViewTextBoxColumn4.HeaderText = "Amount";
+            this.dataGridViewTextBoxColumn4.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 125;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Value";
+            this.dataGridViewTextBoxColumn5.HeaderText = "Value";
+            this.dataGridViewTextBoxColumn5.MinimumWidth = 6;
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.Width = 125;
             // 
             // Units_Nearing_Depletion_
             // 
@@ -206,14 +180,12 @@
             this.Load += new System.EventHandler(this.Units_Nearing_Depletion__Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.book1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetBook2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetBook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetBook1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetBook1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSetBook1BindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.bookBindingSource2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetBook)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.book1BindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -223,12 +195,9 @@
 
         private System.Windows.Forms.Button ToClose_button3;
         private System.Windows.Forms.Label UnitsNearingDepletion_label1;
-        private DataSetBook dataSetBook;
         private System.Windows.Forms.BindingSource bookBindingSource;
-        private DataSetBookTableAdapters.BookTableAdapter bookTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingSource dataSetBook1BindingSource1;
-        private DataSetBook dataSetBook1;
         private System.Windows.Forms.BindingSource dataSetBook1BindingSource;
         private System.Windows.Forms.BindingSource bookBindingSource1;
         private System.Windows.Forms.BindingSource bookBindingSource2;
@@ -237,8 +206,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn categoryDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn amountDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn valueDataGridViewTextBoxColumn;
-        private DataSetBook dataSetBook2;
         private System.Windows.Forms.BindingSource book1BindingSource;
-        private DataSetBookTableAdapters.Book1TableAdapter book1TableAdapter;
+        private DB.DataSetBook dataSetBook;
+        private System.Windows.Forms.BindingSource book1BindingSource1;
+        private DB.DataSetBookTableAdapters.Book1TableAdapter book1TableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
     }
 }

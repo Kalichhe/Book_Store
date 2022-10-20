@@ -81,7 +81,6 @@
             this.SellBook_button3.TabIndex = 11;
             this.SellBook_button3.Text = "Sell Book";
             this.SellBook_button3.UseVisualStyleBackColor = true;
-            this.SellBook_button3.Click += new System.EventHandler(this.SellBook_button3_Click);
             // 
             // ValidateBook_button3
             // 

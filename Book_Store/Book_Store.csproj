@@ -46,27 +46,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Add_Book_To_Cart\Book_To_Cart\Book_To_Cart.cs" />
-    <Compile Include="Add_Book_To_Cart\Book_To_Cart_DB.cs" />
-    <Compile Include="Check_Amount\Check_Amount_DB.cs" />
+    <Compile Include="DataSetTotal.cs">
+      <DependentUpon>DataSetTotal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetTotal.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetTotal.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DataSetShoppingCart.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetShoppingCart.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DB\DataSetBook_To_Cart.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetBook_To_Cart.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\Book_Folder\Sell_Book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interface\Book_Folder\Sell_Book.Designer.cs">
+      <DependentUpon>Sell_Book.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Add_Book_To_Cart\Book_To_Cart\Book_To_Cart_.cs" />
+    <Compile Include="Model\Add_Book_To_Cart\Book_To_Cart_DB.cs" />
+    <Compile Include="Model\Check_Amount\Check_Amount_DB.cs" />
     <Compile Include="Connection.cs" />
-    <Compile Include="CRUD\Book\Book.cs" />
-    <Compile Include="CRUD\Book_DB.cs" />
-    <Compile Include="DataSetBook.cs">
+    <Compile Include="Model\CRUD\Book\Book.cs" />
+    <Compile Include="Model\CRUD\Book_DB.cs" />
+    <Compile Include="DB\DataSetBook.cs">
       <DependentUpon>DataSetBook.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DataSetBook.Designer.cs">
+    <Compile Include="DB\DataSetBook.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetBook.xsd</DependentUpon>
     </Compile>
-    <Compile Include="DataSetGuarantor.Designer.cs">
+    <Compile Include="DB\DataSetGuarantor.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetGuarantor.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Guarantor\Guarantor_1\Guarantor_.cs" />
-    <Compile Include="Guarantor\Guarantor_DB.cs" />
+    <Compile Include="Model\Guarantor\Guarantor_1\Guarantor_.cs" />
+    <Compile Include="Model\Guarantor\Guarantor_DB.cs" />
     <Compile Include="Interface\Book_Folder\Add_Book.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +181,8 @@
     <Compile Include="Interface\Show_Book_Folder\Show_Book.Designer.cs">
       <DependentUpon>Show_Book.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\Sell_Book\Sell\Sell_Book_.cs" />
+    <Compile Include="Model\Sell_Book\Sell_Book_DB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Interface\Book_Folder\Add_Book.resx">
@@ -176,6 +202,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\Book_Folder\Modify_Book.resx">
       <DependentUpon>Modify_Book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interface\Book_Folder\Sell_Book.resx">
+      <DependentUpon>Sell_Book.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interface\Book_Folder\Units_Nearing_Depletion_.resx">
       <DependentUpon>Units_Nearing_Depletion_.cs</DependentUpon>
@@ -213,27 +242,60 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="DataSetBook.xsc">
+    <None Include="DataSetTotal.xsc">
+      <DependentUpon>DataSetTotal.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetTotal.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetTotal.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetTotal.xss">
+      <DependentUpon>DataSetTotal.xsd</DependentUpon>
+    </None>
+    <None Include="DB\DataSetBook.xsc">
       <DependentUpon>DataSetBook.xsd</DependentUpon>
     </None>
-    <None Include="DataSetBook.xsd">
+    <None Include="DB\DataSetBook.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSetBook.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DataSetBook.xss">
+    <None Include="DB\DataSetBook.xss">
       <DependentUpon>DataSetBook.xsd</DependentUpon>
     </None>
-    <None Include="DataSetGuarantor.xsc">
+    <None Include="DB\DataSetGuarantor.xsc">
       <DependentUpon>DataSetGuarantor.xsd</DependentUpon>
     </None>
-    <None Include="DataSetGuarantor.xsd">
+    <None Include="DB\DataSetGuarantor.xsd">
       <SubType>Designer</SubType>
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DataSetGuarantor.Designer.cs</LastGenOutput>
     </None>
-    <None Include="DataSetGuarantor.xss">
+    <None Include="DB\DataSetGuarantor.xss">
       <DependentUpon>DataSetGuarantor.xsd</DependentUpon>
+    </None>
+    <None Include="DB\DataSetShoppingCart.xsc">
+      <DependentUpon>DataSetShoppingCart.xsd</DependentUpon>
+    </None>
+    <None Include="DB\DataSetShoppingCart.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetShoppingCart.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DB\DataSetShoppingCart.xss">
+      <DependentUpon>DataSetShoppingCart.xsd</DependentUpon>
+    </None>
+    <None Include="DB\DataSetBook_To_Cart.xsc">
+      <DependentUpon>DataSetBook_To_Cart.xsd</DependentUpon>
+    </None>
+    <None Include="DB\DataSetBook_To_Cart.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetBook_To_Cart.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DB\DataSetBook_To_Cart.xss">
+      <DependentUpon>DataSetBook_To_Cart.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -248,8 +310,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="More Functions\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -29,11 +29,6 @@ namespace Book_Store.Interface.Show_Book_Folder
                 guarantor.ShowDialog();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void Back_button1_Click(object sender, EventArgs e)
         {
             using (Guarantor guarantor = new Guarantor())
@@ -45,15 +40,7 @@ namespace Book_Store.Interface.Show_Book_Folder
         {
             // TODO: This line of code loads data into the 'dataSetBook.Book' table. You can move, or remove it, as needed.
             this.bookTableAdapter.Fill(this.dataSetBook.Book);
-            // TODO: This line of code loads data into the 'dataSetBook1.Book' table. You can move, or remove it, as needed.
-            // TODO: This line of code loads data into the 'dataSetBook.Book' table. You can move, or remove it, as needed.
-            this.bookTableAdapter.Fill(this.dataSetBook.Book);
-
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

@@ -22,8 +22,6 @@ namespace Book_Store.Interface.Guarantor_Folder
         {
             // TODO: This line of code loads data into the 'dataSetGuarantor.Guarantor' table. You can move, or remove it, as needed.
             this.guarantorTableAdapter.Fill(this.dataSetGuarantor.Guarantor);
-            // TODO: This line of code loads data into the 'dataSetGuarantor.Guarantor' table. You can move, or remove it, as needed.
-
         }
 
         private void ToClose_button3_Click(object sender, EventArgs e)

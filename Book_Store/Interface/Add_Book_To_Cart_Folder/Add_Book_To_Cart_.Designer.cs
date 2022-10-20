@@ -33,7 +33,7 @@
             this.BookCode_textBox1 = new System.Windows.Forms.TextBox();
             this.ToClose_button3 = new System.Windows.Forms.Button();
             this.NumberUnits_label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Units_textBox1 = new System.Windows.Forms.TextBox();
             this.Send_button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -62,7 +62,7 @@
             this.BookCode_textBox1.Location = new System.Drawing.Point(153, 88);
             this.BookCode_textBox1.Name = "BookCode_textBox1";
             this.BookCode_textBox1.Size = new System.Drawing.Size(259, 22);
-            this.BookCode_textBox1.TabIndex = 15;
+            this.BookCode_textBox1.TabIndex = 2;
             // 
             // ToClose_button3
             // 
@@ -70,7 +70,7 @@
             this.ToClose_button3.Location = new System.Drawing.Point(12, 49);
             this.ToClose_button3.Name = "ToClose_button3";
             this.ToClose_button3.Size = new System.Drawing.Size(98, 34);
-            this.ToClose_button3.TabIndex = 17;
+            this.ToClose_button3.TabIndex = 1;
             this.ToClose_button3.Text = "To Close";
             this.ToClose_button3.UseVisualStyleBackColor = true;
             this.ToClose_button3.Click += new System.EventHandler(this.ToClose_button3_Click);
@@ -85,12 +85,12 @@
             this.NumberUnits_label1.TabIndex = 18;
             this.NumberUnits_label1.Text = "Number_Units";
             // 
-            // textBox1
+            // Units_textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(153, 116);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(259, 22);
-            this.textBox1.TabIndex = 19;
+            this.Units_textBox1.Location = new System.Drawing.Point(153, 116);
+            this.Units_textBox1.Name = "Units_textBox1";
+            this.Units_textBox1.Size = new System.Drawing.Size(259, 22);
+            this.Units_textBox1.TabIndex = 3;
             // 
             // Send_button1
             // 
@@ -98,7 +98,7 @@
             this.Send_button1.Location = new System.Drawing.Point(170, 144);
             this.Send_button1.Name = "Send_button1";
             this.Send_button1.Size = new System.Drawing.Size(86, 37);
-            this.Send_button1.TabIndex = 20;
+            this.Send_button1.TabIndex = 4;
             this.Send_button1.Text = "Send";
             this.Send_button1.UseVisualStyleBackColor = true;
             this.Send_button1.Click += new System.EventHandler(this.Send_button1_Click);
@@ -109,7 +109,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(430, 188);
             this.Controls.Add(this.Send_button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Units_textBox1);
             this.Controls.Add(this.NumberUnits_label1);
             this.Controls.Add(this.ToClose_button3);
             this.Controls.Add(this.BookCode_label1);
@@ -129,7 +129,7 @@
         private System.Windows.Forms.TextBox BookCode_textBox1;
         private System.Windows.Forms.Button ToClose_button3;
         private System.Windows.Forms.Label NumberUnits_label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Units_textBox1;
         private System.Windows.Forms.Button Send_button1;
     }
 }

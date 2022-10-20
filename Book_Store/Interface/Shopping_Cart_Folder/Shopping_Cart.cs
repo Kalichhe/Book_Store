@@ -35,5 +35,12 @@ namespace Book_Store.Interface
             using (Guarantor guarantor = new Guarantor())
                 guarantor.ShowDialog();
         }
+
+        private void Shopping_Cart_Load(object sender, EventArgs e)
+        {
+            this.book_To_CartTableAdapter.Fill(this.dataSetBook_To_Cart.Book_To_Cart);
+            this.shoppingCartTableAdapter.Fill(this.dataSetShoppingCart.ShoppingCart);
+
+        }
     }
 }

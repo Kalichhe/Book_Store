@@ -10,7 +10,7 @@
 
 #pragma warning disable 1591
 
-namespace Book_Store {
+namespace Book_Store.DB {
     
     
     /// <summary>
@@ -20,17 +20,17 @@ namespace Book_Store {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DataSetGuarantor")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DataSetShoppingCart")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class DataSetGuarantor : global::System.Data.DataSet {
+    public partial class DataSetShoppingCart : global::System.Data.DataSet {
         
-        private GuarantorDataTable tableGuarantor;
+        private ShoppingCartDataTable tableShoppingCart;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public DataSetGuarantor() {
+        public DataSetShoppingCart() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace Book_Store {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        protected DataSetGuarantor(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DataSetShoppingCart(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace Book_Store {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["Guarantor"] != null)) {
-                    base.Tables.Add(new GuarantorDataTable(ds.Tables["Guarantor"]));
+                if ((ds.Tables["ShoppingCart"] != null)) {
+                    base.Tables.Add(new ShoppingCartDataTable(ds.Tables["ShoppingCart"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace Book_Store {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public GuarantorDataTable Guarantor {
+        public ShoppingCartDataTable ShoppingCart {
             get {
-                return this.tableGuarantor;
+                return this.tableShoppingCart;
             }
         }
         
@@ -127,7 +127,7 @@ namespace Book_Store {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            DataSetGuarantor cln = ((DataSetGuarantor)(base.Clone()));
+            DataSetShoppingCart cln = ((DataSetShoppingCart)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace Book_Store {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["Guarantor"] != null)) {
-                    base.Tables.Add(new GuarantorDataTable(ds.Tables["Guarantor"]));
+                if ((ds.Tables["ShoppingCart"] != null)) {
+                    base.Tables.Add(new ShoppingCartDataTable(ds.Tables["ShoppingCart"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace Book_Store {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tableGuarantor = ((GuarantorDataTable)(base.Tables["Guarantor"]));
+            this.tableShoppingCart = ((ShoppingCartDataTable)(base.Tables["ShoppingCart"]));
             if ((initTable == true)) {
-                if ((this.tableGuarantor != null)) {
-                    this.tableGuarantor.InitVars();
+                if ((this.tableShoppingCart != null)) {
+                    this.tableShoppingCart.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace Book_Store {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "DataSetGuarantor";
+            this.DataSetName = "DataSetShoppingCart";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/DataSetGuarantor.xsd";
+            this.Namespace = "http://tempuri.org/DataSetShoppingCart.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tableGuarantor = new GuarantorDataTable();
-            base.Tables.Add(this.tableGuarantor);
+            this.tableShoppingCart = new ShoppingCartDataTable();
+            base.Tables.Add(this.tableShoppingCart);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private bool ShouldSerializeGuarantor() {
+        private bool ShouldSerializeShoppingCart() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace Book_Store {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            DataSetGuarantor ds = new DataSetGuarantor();
+            DataSetShoppingCart ds = new DataSetShoppingCart();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,25 +270,23 @@ namespace Book_Store {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public delegate void GuarantorRowChangeEventHandler(object sender, GuarantorRowChangeEvent e);
+        public delegate void ShoppingCartRowChangeEventHandler(object sender, ShoppingCartRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class GuarantorDataTable : global::System.Data.TypedTableBase<GuarantorRow> {
+        public partial class ShoppingCartDataTable : global::System.Data.TypedTableBase<ShoppingCartRow> {
             
-            private global::System.Data.DataColumn columnCedula;
+            private global::System.Data.DataColumn columnId_Book;
             
-            private global::System.Data.DataColumn columnName;
-            
-            private global::System.Data.DataColumn columnDabt;
+            private global::System.Data.DataColumn columnId_Guarantor;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GuarantorDataTable() {
-                this.TableName = "Guarantor";
+            public ShoppingCartDataTable() {
+                this.TableName = "ShoppingCart";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -296,7 +294,7 @@ namespace Book_Store {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal GuarantorDataTable(global::System.Data.DataTable table) {
+            internal ShoppingCartDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -313,32 +311,24 @@ namespace Book_Store {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            protected GuarantorDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected ShoppingCartDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn CedulaColumn {
+            public global::System.Data.DataColumn Id_BookColumn {
                 get {
-                    return this.columnCedula;
+                    return this.columnId_Book;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn NameColumn {
+            public global::System.Data.DataColumn Id_GuarantorColumn {
                 get {
-                    return this.columnName;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public global::System.Data.DataColumn DabtColumn {
-                get {
-                    return this.columnDabt;
+                    return this.columnId_Guarantor;
                 }
             }
             
@@ -353,54 +343,46 @@ namespace Book_Store {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GuarantorRow this[int index] {
+            public ShoppingCartRow this[int index] {
                 get {
-                    return ((GuarantorRow)(this.Rows[index]));
+                    return ((ShoppingCartRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event GuarantorRowChangeEventHandler GuarantorRowChanging;
+            public event ShoppingCartRowChangeEventHandler ShoppingCartRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event GuarantorRowChangeEventHandler GuarantorRowChanged;
+            public event ShoppingCartRowChangeEventHandler ShoppingCartRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event GuarantorRowChangeEventHandler GuarantorRowDeleting;
+            public event ShoppingCartRowChangeEventHandler ShoppingCartRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public event GuarantorRowChangeEventHandler GuarantorRowDeleted;
+            public event ShoppingCartRowChangeEventHandler ShoppingCartRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void AddGuarantorRow(GuarantorRow row) {
+            public void AddShoppingCartRow(ShoppingCartRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GuarantorRow AddGuarantorRow(int Cedula, string Name, double Dabt) {
-                GuarantorRow rowGuarantorRow = ((GuarantorRow)(this.NewRow()));
+            public ShoppingCartRow AddShoppingCartRow(int Id_Book, int Id_Guarantor) {
+                ShoppingCartRow rowShoppingCartRow = ((ShoppingCartRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        Cedula,
-                        Name,
-                        Dabt};
-                rowGuarantorRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowGuarantorRow);
-                return rowGuarantorRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GuarantorRow FindByCedula(int Cedula) {
-                return ((GuarantorRow)(this.Rows.Find(new object[] {
-                            Cedula})));
+                        Id_Book,
+                        Id_Guarantor};
+                rowShoppingCartRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowShoppingCartRow);
+                return rowShoppingCartRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                GuarantorDataTable cln = ((GuarantorDataTable)(base.Clone()));
+                ShoppingCartDataTable cln = ((ShoppingCartDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -408,59 +390,49 @@ namespace Book_Store {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new GuarantorDataTable();
+                return new ShoppingCartDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             internal void InitVars() {
-                this.columnCedula = base.Columns["Cedula"];
-                this.columnName = base.Columns["Name"];
-                this.columnDabt = base.Columns["Dabt"];
+                this.columnId_Book = base.Columns["Id_Book"];
+                this.columnId_Guarantor = base.Columns["Id_Guarantor"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             private void InitClass() {
-                this.columnCedula = new global::System.Data.DataColumn("Cedula", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCedula);
-                this.columnName = new global::System.Data.DataColumn("Name", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnName);
-                this.columnDabt = new global::System.Data.DataColumn("Dabt", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDabt);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnCedula}, true));
-                this.columnCedula.AllowDBNull = false;
-                this.columnCedula.Unique = true;
-                this.columnName.AllowDBNull = false;
-                this.columnName.MaxLength = 50;
-                this.columnDabt.AllowDBNull = false;
+                this.columnId_Book = new global::System.Data.DataColumn("Id_Book", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId_Book);
+                this.columnId_Guarantor = new global::System.Data.DataColumn("Id_Guarantor", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnId_Guarantor);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GuarantorRow NewGuarantorRow() {
-                return ((GuarantorRow)(this.NewRow()));
+            public ShoppingCartRow NewShoppingCartRow() {
+                return ((ShoppingCartRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new GuarantorRow(builder);
+                return new ShoppingCartRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(GuarantorRow);
+                return typeof(ShoppingCartRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.GuarantorRowChanged != null)) {
-                    this.GuarantorRowChanged(this, new GuarantorRowChangeEvent(((GuarantorRow)(e.Row)), e.Action));
+                if ((this.ShoppingCartRowChanged != null)) {
+                    this.ShoppingCartRowChanged(this, new ShoppingCartRowChangeEvent(((ShoppingCartRow)(e.Row)), e.Action));
                 }
             }
             
@@ -468,8 +440,8 @@ namespace Book_Store {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.GuarantorRowChanging != null)) {
-                    this.GuarantorRowChanging(this, new GuarantorRowChangeEvent(((GuarantorRow)(e.Row)), e.Action));
+                if ((this.ShoppingCartRowChanging != null)) {
+                    this.ShoppingCartRowChanging(this, new ShoppingCartRowChangeEvent(((ShoppingCartRow)(e.Row)), e.Action));
                 }
             }
             
@@ -477,8 +449,8 @@ namespace Book_Store {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.GuarantorRowDeleted != null)) {
-                    this.GuarantorRowDeleted(this, new GuarantorRowChangeEvent(((GuarantorRow)(e.Row)), e.Action));
+                if ((this.ShoppingCartRowDeleted != null)) {
+                    this.ShoppingCartRowDeleted(this, new ShoppingCartRowChangeEvent(((ShoppingCartRow)(e.Row)), e.Action));
                 }
             }
             
@@ -486,14 +458,14 @@ namespace Book_Store {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.GuarantorRowDeleting != null)) {
-                    this.GuarantorRowDeleting(this, new GuarantorRowChangeEvent(((GuarantorRow)(e.Row)), e.Action));
+                if ((this.ShoppingCartRowDeleting != null)) {
+                    this.ShoppingCartRowDeleting(this, new ShoppingCartRowChangeEvent(((ShoppingCartRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public void RemoveGuarantorRow(GuarantorRow row) {
+            public void RemoveShoppingCartRow(ShoppingCartRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -502,7 +474,7 @@ namespace Book_Store {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                DataSetGuarantor ds = new DataSetGuarantor();
+                DataSetShoppingCart ds = new DataSetShoppingCart();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -520,7 +492,7 @@ namespace Book_Store {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "GuarantorDataTable";
+                attribute2.FixedValue = "ShoppingCartDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -564,48 +536,71 @@ namespace Book_Store {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class GuarantorRow : global::System.Data.DataRow {
+        public partial class ShoppingCartRow : global::System.Data.DataRow {
             
-            private GuarantorDataTable tableGuarantor;
+            private ShoppingCartDataTable tableShoppingCart;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            internal GuarantorRow(global::System.Data.DataRowBuilder rb) : 
+            internal ShoppingCartRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableGuarantor = ((GuarantorDataTable)(this.Table));
+                this.tableShoppingCart = ((ShoppingCartDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public int Cedula {
+            public int Id_Book {
                 get {
-                    return ((int)(this[this.tableGuarantor.CedulaColumn]));
+                    try {
+                        return ((int)(this[this.tableShoppingCart.Id_BookColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Id_Book\' in table \'ShoppingCart\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableGuarantor.CedulaColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public string Name {
-                get {
-                    return ((string)(this[this.tableGuarantor.NameColumn]));
-                }
-                set {
-                    this[this.tableGuarantor.NameColumn] = value;
+                    this[this.tableShoppingCart.Id_BookColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public double Dabt {
+            public int Id_Guarantor {
                 get {
-                    return ((double)(this[this.tableGuarantor.DabtColumn]));
+                    try {
+                        return ((int)(this[this.tableShoppingCart.Id_GuarantorColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("The value for column \'Id_Guarantor\' in table \'ShoppingCart\' is DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tableGuarantor.DabtColumn] = value;
+                    this[this.tableShoppingCart.Id_GuarantorColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsId_BookNull() {
+                return this.IsNull(this.tableShoppingCart.Id_BookColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetId_BookNull() {
+                this[this.tableShoppingCart.Id_BookColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public bool IsId_GuarantorNull() {
+                return this.IsNull(this.tableShoppingCart.Id_GuarantorColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
+            public void SetId_GuarantorNull() {
+                this[this.tableShoppingCart.Id_GuarantorColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -613,22 +608,22 @@ namespace Book_Store {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public class GuarantorRowChangeEvent : global::System.EventArgs {
+        public class ShoppingCartRowChangeEvent : global::System.EventArgs {
             
-            private GuarantorRow eventRow;
+            private ShoppingCartRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GuarantorRowChangeEvent(GuarantorRow row, global::System.Data.DataRowAction action) {
+            public ShoppingCartRowChangeEvent(ShoppingCartRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-            public GuarantorRow Row {
+            public ShoppingCartRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -644,7 +639,7 @@ namespace Book_Store {
         }
     }
 }
-namespace Book_Store.DataSetGuarantorTableAdapters {
+namespace Book_Store.DB.DataSetShoppingCartTableAdapters {
     
     
     /// <summary>
@@ -656,7 +651,7 @@ namespace Book_Store.DataSetGuarantorTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class GuarantorTableAdapter : global::System.ComponentModel.Component {
+    public partial class ShoppingCartTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -670,7 +665,7 @@ namespace Book_Store.DataSetGuarantorTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public GuarantorTableAdapter() {
+        public ShoppingCartTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -767,39 +762,17 @@ namespace Book_Store.DataSetGuarantorTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Guarantor";
-            tableMapping.ColumnMappings.Add("Cedula", "Cedula");
-            tableMapping.ColumnMappings.Add("Name", "Name");
-            tableMapping.ColumnMappings.Add("Dabt", "Dabt");
+            tableMapping.DataSetTable = "ShoppingCart";
+            tableMapping.ColumnMappings.Add("Id_Book", "Id_Book");
+            tableMapping.ColumnMappings.Add("Id_Guarantor", "Id_Guarantor");
             this._adapter.TableMappings.Add(tableMapping);
-            this._adapter.DeleteCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.DeleteCommand.Connection = this.Connection;
-            this._adapter.DeleteCommand.CommandText = "DELETE FROM [Guarantor] WHERE (([Cedula] = @Original_Cedula) AND ([Name] = @Origi" +
-                "nal_Name) AND ([Dabt] = @Original_Dabt))";
-            this._adapter.DeleteCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cedula", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cedula", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.DeleteCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Dabt", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Dabt", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
             this._adapter.InsertCommand = new global::System.Data.SqlClient.SqlCommand();
             this._adapter.InsertCommand.Connection = this.Connection;
-            this._adapter.InsertCommand.CommandText = "INSERT INTO [Guarantor] ([Cedula], [Name], [Dabt]) VALUES (@Cedula, @Name, @Dabt)" +
-                ";\r\nSELECT Cedula, Name, Dabt FROM Guarantor WHERE (Cedula = @Cedula)";
+            this._adapter.InsertCommand.CommandText = "INSERT INTO [ShoppingCart] ([Id_Book], [Id_Guarantor]) VALUES (@Id_Book, @Id_Guar" +
+                "antor)";
             this._adapter.InsertCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cedula", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cedula", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Dabt", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Dabt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand = new global::System.Data.SqlClient.SqlCommand();
-            this._adapter.UpdateCommand.Connection = this.Connection;
-            this._adapter.UpdateCommand.CommandText = "UPDATE [Guarantor] SET [Cedula] = @Cedula, [Name] = @Name, [Dabt] = @Dabt WHERE (" +
-                "([Cedula] = @Original_Cedula) AND ([Name] = @Original_Name) AND ([Dabt] = @Origi" +
-                "nal_Dabt));\r\nSELECT Cedula, Name, Dabt FROM Guarantor WHERE (Cedula = @Cedula)";
-            this._adapter.UpdateCommand.CommandType = global::System.Data.CommandType.Text;
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Cedula", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cedula", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Dabt", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Dabt", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Cedula", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Cedula", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Name", global::System.Data.SqlDbType.VarChar, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Name", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
-            this._adapter.UpdateCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Original_Dabt", global::System.Data.SqlDbType.Float, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Dabt", global::System.Data.DataRowVersion.Original, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Book", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Book", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._adapter.InsertCommand.Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@Id_Guarantor", global::System.Data.SqlDbType.Int, 0, global::System.Data.ParameterDirection.Input, 0, 0, "Id_Guarantor", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -815,7 +788,7 @@ namespace Book_Store.DataSetGuarantorTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT * FROM Guarantor";
+            this._commandCollection[0].CommandText = "SELECT * FROM ShoppingCart";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -823,7 +796,7 @@ namespace Book_Store.DataSetGuarantorTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSetGuarantor.GuarantorDataTable dataTable) {
+        public virtual int Fill(DataSetShoppingCart.ShoppingCartDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -836,9 +809,9 @@ namespace Book_Store.DataSetGuarantorTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSetGuarantor.GuarantorDataTable GetData() {
+        public virtual DataSetShoppingCart.ShoppingCartDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSetGuarantor.GuarantorDataTable dataTable = new DataSetGuarantor.GuarantorDataTable();
+            DataSetShoppingCart.ShoppingCartDataTable dataTable = new DataSetShoppingCart.ShoppingCartDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -846,15 +819,15 @@ namespace Book_Store.DataSetGuarantorTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSetGuarantor.GuarantorDataTable dataTable) {
+        public virtual int Update(DataSetShoppingCart.ShoppingCartDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(DataSetGuarantor dataSet) {
-            return this.Adapter.Update(dataSet, "Guarantor");
+        public virtual int Update(DataSetShoppingCart dataSet) {
+            return this.Adapter.Update(dataSet, "ShoppingCart");
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -875,45 +848,20 @@ namespace Book_Store.DataSetGuarantorTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Delete, true)]
-        public virtual int Delete(int Original_Cedula, string Original_Name, double Original_Dabt) {
-            this.Adapter.DeleteCommand.Parameters[0].Value = ((int)(Original_Cedula));
-            if ((Original_Name == null)) {
-                throw new global::System.ArgumentNullException("Original_Name");
-            }
-            else {
-                this.Adapter.DeleteCommand.Parameters[1].Value = ((string)(Original_Name));
-            }
-            this.Adapter.DeleteCommand.Parameters[2].Value = ((double)(Original_Dabt));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.DeleteCommand.Connection.State;
-            if (((this.Adapter.DeleteCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.DeleteCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.DeleteCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.DeleteCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Insert, true)]
-        public virtual int Insert(int Cedula, string Name, double Dabt) {
-            this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Cedula));
-            if ((Name == null)) {
-                throw new global::System.ArgumentNullException("Name");
+        public virtual int Insert(global::System.Nullable<int> Id_Book, global::System.Nullable<int> Id_Guarantor) {
+            if ((Id_Book.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[0].Value = ((int)(Id_Book.Value));
             }
             else {
-                this.Adapter.InsertCommand.Parameters[1].Value = ((string)(Name));
+                this.Adapter.InsertCommand.Parameters[0].Value = global::System.DBNull.Value;
             }
-            this.Adapter.InsertCommand.Parameters[2].Value = ((double)(Dabt));
+            if ((Id_Guarantor.HasValue == true)) {
+                this.Adapter.InsertCommand.Parameters[1].Value = ((int)(Id_Guarantor.Value));
+            }
+            else {
+                this.Adapter.InsertCommand.Parameters[1].Value = global::System.DBNull.Value;
+            }
             global::System.Data.ConnectionState previousConnectionState = this.Adapter.InsertCommand.Connection.State;
             if (((this.Adapter.InsertCommand.Connection.State & global::System.Data.ConnectionState.Open) 
                         != global::System.Data.ConnectionState.Open)) {
@@ -929,51 +877,6 @@ namespace Book_Store.DataSetGuarantorTableAdapters {
                 }
             }
         }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(int Cedula, string Name, double Dabt, int Original_Cedula, string Original_Name, double Original_Dabt) {
-            this.Adapter.UpdateCommand.Parameters[0].Value = ((int)(Cedula));
-            if ((Name == null)) {
-                throw new global::System.ArgumentNullException("Name");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[1].Value = ((string)(Name));
-            }
-            this.Adapter.UpdateCommand.Parameters[2].Value = ((double)(Dabt));
-            this.Adapter.UpdateCommand.Parameters[3].Value = ((int)(Original_Cedula));
-            if ((Original_Name == null)) {
-                throw new global::System.ArgumentNullException("Original_Name");
-            }
-            else {
-                this.Adapter.UpdateCommand.Parameters[4].Value = ((string)(Original_Name));
-            }
-            this.Adapter.UpdateCommand.Parameters[5].Value = ((double)(Original_Dabt));
-            global::System.Data.ConnectionState previousConnectionState = this.Adapter.UpdateCommand.Connection.State;
-            if (((this.Adapter.UpdateCommand.Connection.State & global::System.Data.ConnectionState.Open) 
-                        != global::System.Data.ConnectionState.Open)) {
-                this.Adapter.UpdateCommand.Connection.Open();
-            }
-            try {
-                int returnValue = this.Adapter.UpdateCommand.ExecuteNonQuery();
-                return returnValue;
-            }
-            finally {
-                if ((previousConnectionState == global::System.Data.ConnectionState.Closed)) {
-                    this.Adapter.UpdateCommand.Connection.Close();
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Update, true)]
-        public virtual int Update(string Name, double Dabt, int Original_Cedula, string Original_Name, double Original_Dabt) {
-            return this.Update(Original_Cedula, Name, Dabt, Original_Cedula, Original_Name, Original_Dabt);
-        }
     }
     
     /// <summary>
@@ -988,7 +891,7 @@ namespace Book_Store.DataSetGuarantorTableAdapters {
         
         private UpdateOrderOption _updateOrder;
         
-        private GuarantorTableAdapter _guarantorTableAdapter;
+        private ShoppingCartTableAdapter _shoppingCartTableAdapter;
         
         private bool _backupDataSetBeforeUpdate;
         
@@ -1010,12 +913,12 @@ namespace Book_Store.DataSetGuarantorTableAdapters {
         [global::System.ComponentModel.EditorAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerPropertyEditor, Microso" +
             "ft.VSDesigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3" +
             "a", "System.Drawing.Design.UITypeEditor")]
-        public GuarantorTableAdapter GuarantorTableAdapter {
+        public ShoppingCartTableAdapter ShoppingCartTableAdapter {
             get {
-                return this._guarantorTableAdapter;
+                return this._shoppingCartTableAdapter;
             }
             set {
-                this._guarantorTableAdapter = value;
+                this._shoppingCartTableAdapter = value;
             }
         }
         
@@ -1038,9 +941,9 @@ namespace Book_Store.DataSetGuarantorTableAdapters {
                 if ((this._connection != null)) {
                     return this._connection;
                 }
-                if (((this._guarantorTableAdapter != null) 
-                            && (this._guarantorTableAdapter.Connection != null))) {
-                    return this._guarantorTableAdapter.Connection;
+                if (((this._shoppingCartTableAdapter != null) 
+                            && (this._shoppingCartTableAdapter.Connection != null))) {
+                    return this._shoppingCartTableAdapter.Connection;
                 }
                 return null;
             }
@@ -1055,7 +958,7 @@ namespace Book_Store.DataSetGuarantorTableAdapters {
         public int TableAdapterInstanceCount {
             get {
                 int count = 0;
-                if ((this._guarantorTableAdapter != null)) {
+                if ((this._shoppingCartTableAdapter != null)) {
                     count = (count + 1);
                 }
                 return count;
@@ -1067,14 +970,14 @@ namespace Book_Store.DataSetGuarantorTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateUpdatedRows(DataSetGuarantor dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DataSetShoppingCart dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._guarantorTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.Guarantor.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._shoppingCartTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.ShoppingCart.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._guarantorTableAdapter.Update(updatedRows));
+                    result = (result + this._shoppingCartTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -1086,13 +989,13 @@ namespace Book_Store.DataSetGuarantorTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateInsertedRows(DataSetGuarantor dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DataSetShoppingCart dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
-            if ((this._guarantorTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.Guarantor.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._shoppingCartTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.ShoppingCart.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._guarantorTableAdapter.Update(addedRows));
+                    result = (result + this._shoppingCartTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -1104,13 +1007,13 @@ namespace Book_Store.DataSetGuarantorTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        private int UpdateDeletedRows(DataSetGuarantor dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DataSetShoppingCart dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._guarantorTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.Guarantor.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._shoppingCartTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.ShoppingCart.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._guarantorTableAdapter.Update(deletedRows));
+                    result = (result + this._shoppingCartTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -1146,15 +1049,15 @@ namespace Book_Store.DataSetGuarantorTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
-        public virtual int UpdateAll(DataSetGuarantor dataSet) {
+        public virtual int UpdateAll(DataSetShoppingCart dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }
             if ((dataSet.HasChanges() == false)) {
                 return 0;
             }
-            if (((this._guarantorTableAdapter != null) 
-                        && (this.MatchTableAdapterConnection(this._guarantorTableAdapter.Connection) == false))) {
+            if (((this._shoppingCartTableAdapter != null) 
+                        && (this.MatchTableAdapterConnection(this._shoppingCartTableAdapter.Connection) == false))) {
                 throw new global::System.ArgumentException("All TableAdapters managed by a TableAdapterManager must use the same connection s" +
                         "tring.");
             }
@@ -1190,13 +1093,13 @@ namespace Book_Store.DataSetGuarantorTableAdapters {
             try {
                 // ---- Prepare for update -----------
                 //
-                if ((this._guarantorTableAdapter != null)) {
-                    revertConnections.Add(this._guarantorTableAdapter, this._guarantorTableAdapter.Connection);
-                    this._guarantorTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
-                    this._guarantorTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
-                    if (this._guarantorTableAdapter.Adapter.AcceptChangesDuringUpdate) {
-                        this._guarantorTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
-                        adaptersWithAcceptChangesDuringUpdate.Add(this._guarantorTableAdapter.Adapter);
+                if ((this._shoppingCartTableAdapter != null)) {
+                    revertConnections.Add(this._shoppingCartTableAdapter, this._shoppingCartTableAdapter.Connection);
+                    this._shoppingCartTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(workConnection));
+                    this._shoppingCartTableAdapter.Transaction = ((global::System.Data.SqlClient.SqlTransaction)(workTransaction));
+                    if (this._shoppingCartTableAdapter.Adapter.AcceptChangesDuringUpdate) {
+                        this._shoppingCartTableAdapter.Adapter.AcceptChangesDuringUpdate = false;
+                        adaptersWithAcceptChangesDuringUpdate.Add(this._shoppingCartTableAdapter.Adapter);
                     }
                 }
                 // 
@@ -1257,9 +1160,9 @@ namespace Book_Store.DataSetGuarantorTableAdapters {
                 if (workConnOpened) {
                     workConnection.Close();
                 }
-                if ((this._guarantorTableAdapter != null)) {
-                    this._guarantorTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._guarantorTableAdapter]));
-                    this._guarantorTableAdapter.Transaction = null;
+                if ((this._shoppingCartTableAdapter != null)) {
+                    this._shoppingCartTableAdapter.Connection = ((global::System.Data.SqlClient.SqlConnection)(revertConnections[this._shoppingCartTableAdapter]));
+                    this._shoppingCartTableAdapter.Transaction = null;
                 }
                 if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
                     global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
